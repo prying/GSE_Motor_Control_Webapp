@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<form method="post" action="/">
+                        <input type="submit" name="event_button" value="0">
+			<input type="submit" name="event_button" value="1">
+			<input type="submit" name="event_button" value="2">
+                        <input type="submit" name="event_button" value="3">
+                        <input type="submit" name="event_button" value="4">
+                        <input type="submit" name="event_button" value="5">
+                        <input type="submit" name="event_button" value="6">
+                        <input type="submit" name="event_button" value="7">
+		</form>
+	<div>
+		<br>
+		Last rx: {{ UART_RX }}
+	</div>
+	<div>
+		<br>
+		<table>
+			<tr>
+				<th>Event</th>
+				<th>Number</th>
+				<th>Info</th>
+			</tr>
+			<tr>
+				<td>Error</td>
+				<td>0</td>
+			</tr>
+                        <tr>
+                                <td>Arm</td>
+                                <td>1</td>
+                        </tr>
+                        <tr>
+                                <td>Launch</td>
+                                <td>2</td>
+				<td>Turns on igniter and timer for next state</td>
+                        </tr>
+                        <tr>
+                                <td>Open Valve</td>
+                                <td>3</td>
+				<td>Starts next state timer</td>
+                        </tr>
+                        <tr>
+                                <td>Stop Igniter</td>
+                                <td>4</td>
+                        </tr>
+                        <tr>
+                                <td>Reset</td>
+                                <td>5</td>
+                        </tr>
+                        <tr>
+                                <td>Last</td>
+                                <td>6</td>
+				<td>Unused</td>
+                        </tr>
+                        <tr>
+                                <td>Next state</td>
+                                <td>7</td>
+				<td>Auto moves to next state (Not a real event)</td>
+                        </tr>
+		</table>
+	</div>
+	</body>
+</html>

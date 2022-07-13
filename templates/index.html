@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<form method="post" action="/">
+	<div>
+		<br>
+		Last rx: {{ UART_RX }}
+	</div>
+	<div>
+		<br>
+		<table>
+			<tr>
+				<th>Send</th>
+				<th>Event</th>
+				<th>Number</th>
+				<th>Info</th>
+			</tr>
+			<tr>
+				<td><input type="submit" name="event_button" value="0"></td>
+				<td>Error</td>
+				<td>0</td>
+			</tr>
+                        <tr>
+				<td><input type="submit" name="event_button" value="1"></td>
+                                <td>Arm</td>
+                                <td>1</td>
+                        </tr>
+                        <tr>
+				<td><input type="submit" name="event_button" value="2"></td>
+                                <td>Launch</td>
+                                <td>2</td>
+				<td>Turns on igniter and timer for next state</td>
+                        </tr>
+                        <tr>
+				<td><input type="submit" name="event_button" value="3"></td>
+                                <td>Open Valve</td>
+                                <td>3</td>
+				<td>Starts next state timer</td>
+                        </tr>
+                        <tr>
+				<td><input type="submit" name="event_button" value="4"></td>
+                                <td>Stop Igniter</td>
+                                <td>4</td>
+                        </tr>
+                        <tr>
+                                <td><input type="submit" name="event_button" value="5"></td>
+                                <td>Reset</td>
+                                <td>5</td>
+                        </tr>
+                        <tr>
+                                <td><input type="submit" name="event_button" value="6"></td>
+                                <td>Last</td>
+                                <td>6</td>
+				<td>Unused</td>
+                        </tr>
+                        <tr>
+                                <td><input type="submit" name="event_button" value="7"></td>
+                                <td>Next state</td>
+                                <td>7</td>
+				<td>Auto moves to next state (Not a real event)</td>
+                        </tr>
+                        <tr>
+                                <td><input type="submit" name="event_button" value="8"></td>
+                                <td>Current state</td>
+                                <td>8</td>
+                                <td>Displays current state (Not a real event)</td>
+                        </tr>
+		</table>
+	</div>
+	</form>
+</html>
