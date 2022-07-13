@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 from flask import Flask, render_template, request
 import serial
+import logging
+
+logging.basicConfig(filename = 'webapp.log', level=logging.INFO, format = '%(asctime)s.%(msecs)03d, %(levelname)s, %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
 
 ser = serial.Serial(
         port='/dev/serial0', #Replace ttyS0 with ttyAM0 for Pi1,Pi2,Pi0
@@ -23,6 +26,7 @@ def index():
 			msg = request.form.get('event_button')
 			msg = msg.encode('ascii', errors='backslashreplace')
 			print("intput", msg)
+			app.logger.info(msg)
 			ret = UART_write(msg)
 			if type(ret) == str:
 				rx = ret + UART_recive().decode('UTF-8')
